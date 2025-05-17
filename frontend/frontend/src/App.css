@@ -1,0 +1,699 @@
+/* App.css */
+.app-container {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-height: 100vh;
+}
+.title{
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto 2vh auto;
+}
+
+
+.upload-section {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.upload-section input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.upload-section button {
+  padding: 10px 20px;
+  background-color: #28b7ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.upload-section button:hover {
+  background-color: #00aaff;
+}
+
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjusted for consistent column width */
+  gap: 15px;  /* Reduced gap between images */
+  justify-items: center;
+  align-items: center; /* Center images vertically as well */
+  margin-top: 20px;
+}
+
+.image-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.uploaded-image, .selected-person-image, .detected-face {
+  width: 100%;
+  height: 150px;  /* Ensure all images have same height */
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.uploaded-image:hover, .selected-person-image:hover, .detected-face:hover {
+  transform: scale(1.05);
+}
+
+.detected-face {
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.detected-face.selected {
+  border-color:   #28b7ff;
+  transform: scale(1.05);
+}
+
+p {
+  text-align: center;
+  color: #777;
+}
+
+button {
+  transition: background-color 0.3s ease;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+/* App.css */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.login-card {
+  background: white;
+  padding: 30px;
+  margin: 0 auto; /* Centers it */
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+
+.login-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.login-description {
+  margin-bottom: 20px;
+  color: #6c757d;
+}
+
+.google-login-button {
+  background-color: white;
+  color: black;
+  padding: 12px 30px;
+  border-radius: 5px;
+  border: 2px solid #2c2c2c; /* Blue border */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  box-shadow: none; /* Box-shadow hata diya */
+}
+
+.google-login-button:hover {
+  background-color: #000000; /* Blue background on hover */
+  color: white;
+}
+
+.google-icon {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  max-width: 100%;
+
+  clear: both; /* Clear any previous floats */
+}
+
+
+.user-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 20px;
+  object-fit: cover;
+  border: 2px solid #ddd; /* Light border around the avatar */
+}
+
+.user-details {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.user-details h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.user-details p {
+  font-size: 14px;
+  color: #777;
+  margin: 5px 0;
+}
+
+.user-info button{
+  margin: 0 0 0 20px;
+  background-color: #ff2828;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px; /* Rounded corners for the button */
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 2px solid #ff2828; /* Border matching the background color */
+}
+
+.user-info button:hover {
+  background-color: white;
+  color: #ff2828;
+  border: 2px solid #ff2828;
+
+}
+
+.user-info button:active {
+  transform: translateY(0); /* Return to normal state */
+}
+
+/* Profile Section Adjustment */
+.user-info-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Auth Section */
+.auth-input {
+  width: 100%;  /* Login button ke barabar ho jayega */
+  max-width: 400px; /* Limit width for large screens */
+  padding: 12px;
+  margin: 8px auto;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box; /* Ensures padding doesn't break width */
+}
+.email-login-button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.email-login-button:hover {
+  background-color: #0056b3;
+}
+.toggle-text {
+  text-align: center;
+  color: #007bff;
+  margin-top: 10px;
+}
+.toggle-text span.signup-text,
+.toggle-text span.login-text {
+  cursor: pointer;
+}
+.toggle-text span.signup-text:hover,
+.toggle-text span.login-text:hover {
+  text-decoration: underline;
+}
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #ddd;
+  margin: 0 10px;
+}
+
+.divider span {
+  color: #777;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+
+.upload-button:disabled {
+  background-color: #ccc; /* Gray for disabled state */
+  cursor: not-allowed;
+  color: #666;
+}
+
+.upload-container {
+
+  display: flex;
+  align-items: center; /* Align items vertically */
+  gap: 20px; /* Space between sections */
+  justify-content: space-between; /* Spread buttons and file count */
+}
+
+.file-count {
+  max-width: 200px; /* Limit the width of file count */
+  height: 40px; /* Fixed height to prevent layout shifts */
+  overflow: hidden; /* Hide overflowing content */
+  text-overflow: ellipsis; /* Add "..." for long content */
+  white-space: nowrap; /* Prevent wrapping */
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  align-items: center; /* Center text vertically */
+}
+.upload-button {
+  background-color: #2bc544;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.upload-button:hover {
+  background-color: #229735;
+}
+
+.upload-button:active {
+  background-color: #229735;
+}
+
+
+.file-info {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: flex-start; /* Align items to the left */
+  gap: 10px; /* Space between file count and remove icon */
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  height: 40px; /* Fixed height to prevent layout shifts */
+}
+
+.clear-files-button  {
+  background: none !important; /* Override any inherited background */
+  border: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.clear-files-button:hover {
+  color: #d32f2f;
+  transform: scale(1.2); /* Slight zoom effect */
+}
+.clear-files-button:active {
+  color: #a30000; /* Even darker red on active click */
+}
+.camera-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.cancel-button {
+  padding: 10px 20px;
+  background-color: #dc3545; /* Red background for Cancel */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.cancel-button:hover {
+  background-color: #c82333; /* Darker red on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.cancel-button:active {
+  background-color: #a71d2a; /* Even darker red on click */
+  transform: scale(0.95); /* Slight shrink effect */
+}
+
+.cancel-button:focus {
+  outline: 2px solid #ffbbbb; /* Light red focus outline */
+  outline-offset: 2px;
+}
+.capture-button {
+  padding: 10px 20px;
+  background-color: #28a745; /* Green button */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.capture-button:hover {
+  background-color: #218838; /* Darker green on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.capture-button:active {
+  background-color: #1e7e34; /* Even darker green on click */
+  transform: scale(0.95); /* Slight shrink effect */
+}
+
+.capture-button:focus {
+  outline: 2px solid #80bdff; /* Focus outline for accessibility */
+  outline-offset: 2px;
+}
+
+.user-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+.image-item {
+  position: relative; /* Required for absolute positioning */
+}
+
+.selected-person-image {
+  width: 100%; /* Keeps image responsive */
+  height: auto; /* Prevents distortion */
+  border-radius: 5px;
+}
+
+.hover-overlay {
+  position: absolute;
+  top: 10px; /* Adjust distance from the top */
+  right: 10px; /* Adjust distance from the right */
+  padding: 5px;
+  border-radius: 50%; /* Circular background for the icon */
+  display: none; /* Hidden by default */
+  transition: opacity 0.3s ease-in-out; /* Smooth fade-in effect */
+}
+.image-item:hover img {
+  transform: scale(1.2); /* Zoom effect */
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+.image-item:hover .hover-overlay {
+  display: block; /* Show overlay on hover */
+}
+
+.download-icon {
+  color: white;
+  font-size: 18px; /* Icon size */
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  width: 24px;
+}
+.selected-person-image {
+  width: 150px; /* Set fixed width */
+  height: 150px; /* Set fixed height */
+  object-fit: cover; /* Crops image to fit within the frame */
+  border-radius: 5px; /* Optional, for a polished look */
+  transition: transform 0.3s ease-in-out; /* Smooth effect for hover or selection */
+}
+
+.image-item:hover .selected-person-image {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+.delete-button {
+  background-color: #dc3545; /* Red color for warning */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.delete-button:hover {
+  background-color: #b02a37;
+}
+
+/* Default light mode styles */
+
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.theme-toggle {
+  padding: 10px 15px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  opacity: 0.8;
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #0b0f19;
+  color: #f0f0f0;
+}
+
+.dark-mode .theme-toggle {
+  color: #000000;
+}
+
+.dark-mode .theme-toggle:hover {
+  opacity: 0.8;
+}
+
+.image-item {
+  position: relative; /* For positioning the trash icon */
+  display: inline-block;
+}
+
+.uploaded-image {
+  display: block;
+  width: 150px; /* Set fixed width for thumbnail */
+  height: 150px; /* Set fixed height for thumbnail */
+  object-fit: cover; /* Ensures images are cropped to fit dimensions */
+  border-radius: 5px; /* Optional: Add rounded corners */
+  margin: auto; /* Center image within its container */
+}
+
+
+.delete-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none; /* Hidden by default */
+}
+
+.image-item:hover .delete-icon {
+  display: flex; /* Show icon on hover */
+  align-items: center;
+  justify-content: center;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  width: 300px;
+}
+
+.modal-button {
+  padding: 10px 15px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.modal-button:hover {
+  background-color: #007bff; /* Blue hover */
+  color: white;
+}
+
+.cancel-modal-button:hover {
+  background-color: #dc3545; /* Red hover for 'No' */
+  color: white;
+}
+.password-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px; /* Adjust based on your layout */
+}
+
+.password-input {
+  width: 100%;
+  padding: 10px;
+  padding-right: 40px; /* Add space for the button */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.toggle-password-inside {
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Adjust the button position inside the input */
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #000000;
+  transition: color 0.3s ease;
+}
+
+.toggle-password-inside:hover {
+  color: #0056b3; /* Darker blue on hover */
+}
+.modal-content progress {
+  width: 100%;
+  height: 20px; /* Slightly taller for prominence */
+  border-radius: 10px; /* Rounded edges for modern look */
+  overflow: hidden;
+  background-color: #e6e6e6; /* Light gray for background */
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2); /* Subtle inner shadow */
+}
+
+.modal-content progress::-webkit-progress-bar {
+  background-color: #e6e6e6; /* Background of the progress bar */
+}
+
+.modal-content progress::-webkit-progress-value {
+  background-image: linear-gradient(90deg, #007bff, #28a745); /* Gradient effect */
+  border-radius: 10px; /* Ensures rounded edges on progress fill */
+  transition: width 0.3s ease-in-out; /* Smooth fill animation */
+}
+
+.modal-content p {
+  font-size: 14px; /* Slightly larger font */
+  font-weight: bold; /* Make it stand out */
+  color: #333; /* Neutral dark text */
+  margin-top: 10px; /* Add space between progress bar and text */
+}
+
+.modal-close-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-close-button:hover {
+  background-color: #0056b3;
+}
+
+
+
+.success-message {
+  color: green;
+  font-size: 16px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.error-message {
+  color: red;
+  font-size: 16px;
+  margin-top: 10px;
+  font-weight: bold;
+}
