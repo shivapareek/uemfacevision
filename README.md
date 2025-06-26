@@ -20,12 +20,14 @@
 
 ## 🚀 How to Run Locally
 
+
+
 ### ✅ 1. Backend (FastAPI)
 ```bash
 cd backend
 uvicorn main:app --reload
 
-### ✅ 1. Frontend (React)
+### ✅ 2. Frontend (React)
 ```bash
 cd frontend/frontend
 npm install
